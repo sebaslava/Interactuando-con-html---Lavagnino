@@ -32,14 +32,17 @@ const verduras = [
     },
 
 ];
+function busquedaProducto (){
+    producto = prompt ("Ingrese el producto que desea buscar: ")
+    busqueda = verduras.find( elemento => elemento.nombre == producto )
+}
+
 let producto;
 let busqueda;
 let nuevoProducto;
 do {
 
-    producto = prompt ("Ingrese el producto que desea buscar: ")
-    busqueda = verduras.find( elemento => elemento.nombre == producto )
-  
+    busquedaProducto();
     console.log(busqueda)
   
     if (!busqueda) alert("Producto no encontrado")
